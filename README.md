@@ -1,33 +1,32 @@
 # Nix Darwin Kickstarter
 
-A beginner-friendly nix-darwin + home-manager + flakes startup configuration.
+Konfigurasi awal nix-darwin + home-manager + flakes yang ramah untuk pemula.
 
-The primary objective of this repository is to assist beginners in comprehending the fundamental setup of nix-darwin, enabling them to swiftly initiate their own nix-darwin configuration.
+Tujuan utama repositori ini adalah membantu pemula memahami dasar-dasar penyiapan nix-darwin, sehingga mereka dapat dengan cepat memulai konfigurasi nix-darwin mereka sendiri.
 
 Two template versions are available:
 
-- [minimal](./minimal): A basic configuration comprising essential settings for initiating nix-darwin. It can be safely deployed to your system.
-- [rich-demo](./rich-demo): An extensive demo featuring a plethora of configurations that can serve as a reference for your setup. However, exercise caution, as it may **OVERWRITE** your system configuration. **DO NOT** deploy it directly to your system.
+- [minimal](./minimal): Konfigurasi dasar yang berisi pengaturan penting untuk memulai nix-darwin. Aman untuk diterapkan ke sistem Anda.
+- [rich-demo](./rich-demo): Demo yang lebih lengkap dengan banyak konfigurasi yang bisa dijadikan referensi. Namun, harap berhati-hati karena dapat **MENIMPA** konfigurasi sistem Anda. **JANGAN** menerapkannya langsung ke sistem Anda.
 
-## Why nix-darwin
+## Mengapa nix-darwin
 
-Nix-darwin facilitates the management of your macOS system configuration and dotfiles in a declarative manner.
-You can effortlessly revert to any previous configuration, making it a robust tool for system customization.
-Sharing configurations becomes seamless, and managing multiple macOS hosts is a breeze with nix-darwin.
+Nix-darwin memudahkan pengelolaan konfigurasi sistem macOS dan dotfiles Anda secara deklaratif.
+Anda dapat dengan mudah kembali ke konfigurasi sebelumnya, sehingga ini menjadi alat yang kuat untuk kustomisasi sistem.
+Berbagi konfigurasi menjadi lebih mudah, dan mengelola beberapa host macOS juga menjadi simpel dengan nix-darwin.
 
-## Showcases
+## Contoh
 
-Enable TouchID for sudo with just one line:
+Aktifkan TouchID untuk sudo hanya dengan satu baris:
 
 ![](./_img/nix-darwin-enable-touchid.webp)
 
-Customize (Almost) all your macOS settings via nix-darwin:
+Kustomisasi (hampir) semua pengaturan macOS melalui nix-darwin:
 
 ![](./_img/customize-your-macos.webp)
 
-## References
+## Referensi
 
 - [LnL7/nix-darwin](https://github.com/LnL7/nix-darwin)
 - [macos-defaults](https://github.com/yannbertrand/macos-defaults)
 - [ryan4yin/nix-config/modules/darwin](https://github.com/ryan4yin/nix-config/tree/main/modules/darwin)
-

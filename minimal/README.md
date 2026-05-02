@@ -2,15 +2,25 @@
 
  A basic configuration comprising essential settings for initiating nix-darwin. It can be safely deployed to your system.
 
+ Konfigurasi dasar yang berisi pengaturan penting untuk memulai nix-darwin. Aman untuk diterapkan ke sistem Anda.
+
 ## How to Use
 
+## Cara Menggunakan
+
 1. Install Nix package manager via [Nix Official](https://nixos.org/download.html#nix-install-macos) or [DeterminateSystems/nix-installer](https://github.com/DeterminateSystems/nix-installer).
+   - Instal Nix package manager melalui [Nix Official](https://nixos.org/download.html#nix-install-macos) atau [DeterminateSystems/nix-installer](https://github.com/DeterminateSystems/nix-installer).
 2. Read all the files in this `minimal` folder, and understand what they do.
+   - Baca semua file di folder `minimal` ini, dan pahami fungsinya.
    1. If you have trouble understanding, [ryan4yin/nixos-and-flakes-book](https://github.com/ryan4yin/nixos-and-flakes-book) is a good resource to learn nix and flakes.
+      - Jika kesulitan memahami, [ryan4yin/nixos-and-flakes-book](https://github.com/ryan4yin/nixos-and-flakes-book) adalah sumber yang bagus untuk mempelajari Nix dan flakes.
 3. Install Homebrew, see <https://brew.sh/>
    1. Homebrew is required to install most of the GUI apps, App Store's apps, and some CLI apps that are not available in nix's package repository `nixpkgs`.
+      - Homebrew diperlukan untuk memasang sebagian besar aplikasi GUI, aplikasi dari App Store, dan beberapa aplikasi CLI yang tidak tersedia di repositori paket Nix `nixpkgs`.
 4. Search `TODO` in this `minimal` folder, and complete all the TODOs.
+   - Cari `TODO` di folder `minimal` ini, lalu selesaikan semua TODO.
 5. Run the following command in the root of your nix configuration to start your nix-darwin journey(please change `hostname` to your hostname):
+   - Jalankan perintah berikut di root konfigurasi Nix Anda untuk memulai perjalanan nix-darwin Anda (silakan ganti `hostname` dengan hostname Anda):
    ```bash
 	nix build .#darwinConfigurations.hostname.system \
 		--extra-experimental-features 'nix-command flakes'
@@ -19,6 +29,8 @@
    ```
 
 To simplify the command, adding the following content by create a `Makefile` in the root of your nix configuration:
+
+Untuk menyederhanakan perintah, tambahkan konten berikut dengan membuat `Makefile` di root konfigurasi Nix Anda:
 
 ```makefile
 # please change 'hostname' to your hostname
@@ -31,9 +43,15 @@ deploy:
 
 Then you can run `make deploy` in the root of your nix configuration to deploy your configuration.
 
+Kemudian Anda dapat menjalankan `make deploy` di root konfigurasi Nix Anda untuk menerapkan konfigurasi.
+
 ## Configuration Structure
 
+## Struktur Konfigurasi
+
 Your current nix-darwin configuration's structure should be as follows:
+
+Struktur konfigurasi nix-darwin Anda seharusnya seperti berikut:
 
 ```bash
 › tree
@@ -51,12 +69,17 @@ Your current nix-darwin configuration's structure should be as follows:
 
 ## Notes on Network Proxy
 
+## Catatan tentang Proxy Jaringan
+
 If you are in a network environment that requires proxy(such as China), you may need to set up proxy for nix and homebrew.
 
+Jika Anda berada di lingkungan jaringan yang memerlukan proxy (misalnya di Tiongkok), Anda mungkin perlu menyiapkan proxy untuk Nix dan Homebrew.
+
 Please refer to the `rich-demo` folder for more details:
+
+Silakan lihat folder `rich-demo` untuk detail lebih lanjut:
 
 - [rich-demo/scripts/darwin_set_proxy.py](/rich-demo/scripts/darwin_set_proxy.py)
 - [rich-demo/Makefile](/rich-demo/Makefile)
 - [rich-demo - homebrew's mirror settings](/rich-demo/modules/homebrew-mirror.nix)
-
 

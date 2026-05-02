@@ -2,16 +2,27 @@
 
  An extensive demo featuring a plethora of configurations that can serve as a reference for your setup. However, exercise caution, as it may **OVERWRITE** your system configuration. **DO NOT** deploy it directly to your system.
 
+ Demo yang lebih lengkap dengan banyak konfigurasi yang bisa dijadikan referensi. Namun, harap berhati-hati karena dapat **MENIMPA** konfigurasi sistem Anda. **JANGAN** menerapkannya langsung ke sistem Anda.
+
 
 ## How to Use
 
+## Cara Menggunakan
+
 1. Start your nix-darwin journey by following the [minimal](../minimal) configuration.
+   - Mulai perjalanan nix-darwin Anda dengan mengikuti konfigurasi [minimal](../minimal).
 2. Read all the files in this repository, and understand what they do.
+   - Baca semua file di repositori ini, dan pahami fungsinya.
    1. If you have trouble understanding, [ryan4yin/nixos-and-flakes-book](https://github.com/ryan4yin/nixos-and-flakes-book) is a good resource to learn nix and flakes.
+      - Jika kesulitan memahami, [ryan4yin/nixos-and-flakes-book](https://github.com/ryan4yin/nixos-and-flakes-book) adalah sumber yang bagus untuk mempelajari Nix dan flakes.
 3. Copy and CUSTOMIZE the configuration you need from this demo to your own configuration.
+   - Salin dan SESUAIKAN konfigurasi yang Anda perlukan dari demo ini ke konfigurasi Anda sendiri.
 4. Run `just darwin` in the root of your nix configuration to deploy your configuration.
+   - Jalankan `just darwin` di root konfigurasi Nix Anda untuk menerapkan konfigurasi.
 
 Other Juse commands:
+
+Perintah `just` lainnya:
 
 ```bash
 # See all available commands
@@ -24,7 +35,11 @@ just gc
 
 ## Configuration Structure
 
+## Struktur Konfigurasi
+
 Your current nix-darwin configuration's structure should be as follows:
+
+Struktur konfigurasi nix-darwin Anda seharusnya seperti berikut:
 
 ```bash
 › tree
@@ -50,11 +65,16 @@ Your current nix-darwin configuration's structure should be as follows:
 
 ## Notes on Network Proxy
 
+## Catatan tentang Proxy Jaringan
+
 If you are in a network environment that requires proxy(such as China), you may need to set up proxy for nix and homebrew.
 
+Jika Anda berada di lingkungan jaringan yang memerlukan proxy (misalnya di Tiongkok), Anda mungkin perlu menyiapkan proxy untuk Nix dan Homebrew.
+
 Related files:
+
+File terkait:
 
 - [rich-demo/scripts/darwin_set_proxy.py](/rich-demo/scripts/darwin_set_proxy.py)
 - [rich-demo/Justfile](/rich-demo/Justfile)
 - [rich-demo - homebrew's mirror settings](/rich-demo/modules/homebrew-mirror.nix)
-
